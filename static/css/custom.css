@@ -1,0 +1,92 @@
+[data-position="relative"] {
+  position: relative;
+  top: 10px;
+  right: -85px;
+}
+
+.dropdown-title{
+ display: block;
+}
+
+
+.dropdown-model{
+ width:150px;
+ height:30px;
+ margin-right: 25.5%;
+ margin-bottom : 30px;
+ display: block;
+}
+
+.popover-body{
+ max-width: 600px;
+}
+.popover-title{
+ max-width: 600px;
+}
+.popover-content{
+ max-width: 600px;
+}
+
+.panel-title {
+ display: inline-block;
+ width: 500px;
+}
+.panel-subtitle{
+ width: 220px;
+}
+.form-control{
+ display: inline-block;
+ width: 70%;
+}
+.slide-title{
+ display: inline-block;
+}
+.slide-value{
+ display: inline-block;
+ width: 50px;
+ float: right;
+ text-align: center;
+ }
+
+.slide-container {
+    display: inline-block;
+    width : 100%;
+}
+
+.slider {
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 100%; /* 슬라이더 길이 */
+    height: 10px; /* 슬라이더 두께 */
+    border-radius: 5px; /* 슬라이더 모서리를 약간 둥글게 */
+    background: #ccc; /* 슬라이더 색상 */
+    outline: none; /* 슬라이더 테두리 없이 */
+    margin-bottom: 30px;
+}
+
+/* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀
+(Chrome, Opera, Safari, Edge 브라우저를 위해서는 -webkit-을,
+Firefox 브라우저를 위해서는 -moz- 를 사용하세요 */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 10px; /* 슬라이더 핸들 길이 */
+    height: 10px; /* 슬라이더 핸들 높이 */
+    border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+    background: grey; /* 슬라이더 핸들 색상 */
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* 슬라이더 핸들 길이 */
+    height: 25px; /* 슬라이더 핸들 높이 */
+    border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+    background: #00f; /* 슬라이더 핸들 색상 */
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}
+
+div.editable {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #dcdcdc;
+    overflow-y: auto;
+}

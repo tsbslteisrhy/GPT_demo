@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+	<title>Douzone</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" href="static/css/custom.css">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="static/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="static/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<!--상단 네비바-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="/list">
+					<img class="img-responsive logo" src="static/img/douzone-logo.png" >
+				</a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<!--네비바 Help-->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Basic Use</a></li>
+								<li><a href="#">Working With Data</a></li>
+								<li><a href="#">Security</a></li>
+								<li><a href="#">Troubleshooting</a></li>
+							</ul>
+						</li>
+						<!--네비바 계정-->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="static/img/amaranth10-icon.png" class="img-circle" alt="Avatar"> <span>Unknown</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 네비바 끝 -->
+
+		<!-- 왼쪽 사이드바 -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li>
+							<a href="#subPages1" data-toggle="collapse"><i class="lnr lnr-file-empty"></i> <span>번역</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages1" class="collapse in">
+								<ul class="nav">
+									<li><a href="page-conversation_summary(OpenAI).html">- 설명</a></li>
+									<li><a href="page-conversation_summary(OpenAI).html">- 테스트</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages2" data-toggle="collapse"><i class="lnr lnr-file-empty"></i><span>키워드 추출</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages2" class="collapse in">
+								<ul class="nav">
+									<li><a href="page-conversation_summary(OpenAI).html">- 설명</a></li>
+									<li><a href="page-conversation_summary(OpenAI).html">- 테스트</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages3" data-toggle="collapse" class="active"><i class="lnr lnr-file-empty"></i> <span>요약</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages3" class="collapse in">
+								<ul class="nav">
+									<li><a href="page-conversation_summary(OpenAI).html">- 설명</a></li>
+									<li><a href="page-conversation_summary(OpenAI).html" class="active">- 테스트</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#subPages4" data-toggle="collapse"><i class="lnr lnr-file-empty"></i> <span>쪽지 자동생성</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages4" class="collapse in">
+								<ul class="nav">
+									<li><a href="/prompt-concept-generate">- 설명</a></li>
+									<li><a href="page-conversation_summary(OpenAI).html">- 테스트</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- 왼쪽 사이드바 끝 -->
+
+		<!-- 메인 콘텐트 시작 -->
+		<div class="main">
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="panel panel-headline">
+						<div class="panel-heading">
+							<!--팝오버-->
+							<div class="">
+								<button data-position="relative" data-toggle="popover" data-html="true"
+										title="명령어 예시" data-content="1. 키워드 추출 : 핵심 키워드 추출 <br>2. 정보 추출: 회장님 지시사항  <br>3. 언어 번역 : 영어로 번역 <br>4. 요약문 작성 : 한 줄 요약"><i class="fa fa-info-circle"></i></button>
+								<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+								<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+								<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+								<script>
+									$(function () {
+									  $('[data-toggle="popover"]').popover({
+									  	container: 'body'})
+									});
+								</script>
+							</div>
+							<!-- 팝오버 끝 -->
+
+							<h3 class="panel-title">요약</h3>
+							<p class="panel-subtitle">Text Summarization</p>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<form method="POST">
+									<!--프롬프트 박스-->
+									<div class="col-md-9">
+										<textarea id="prompt" name="prompt" class="form-control"  required="required" spellcheck="False"
+												  rows="18" style="padding:10px;" placeholder="텍스트 입력...">
+Mullen 나만의메모 정책 정리
+작성일 : 22.11.03 | 작성자 : 모바일Cell 방유라
+[지시사항]
+지시자. 지시일. 채널. 내용
+회장님. 22.09.13. 대면보고. - 메모, 연락처 등을 참여자를 특정하여 공유(조회제한)하고자 함 - 정보에 비밀번호를 생성해서 직접 참여자에게 전달하면 어떨지 아이디어 제공함.
+대표님. 22.10.24. 대면보고. - 기존 제안서 내용 모두 해당 없음 (Mullen 2.0_히든메모 UI 제안_v1.0_221007.pdf) - 히든메모 별도 필드 존재 - 일정 참여자(수정권한) 누구나 본인만 조회 가능한 메모 작성 가능 - 디폴트 : 히든메모 비활성화(항목 미노출) - 히든메모 활성화 : 본인에게도 항목 미노출, 터치 시 노출 - 일정등록자가 권한 제외 시 본인 메모가 안보이는 이슈 대응필요.
+[Mullen - 나만의메모 정책 정리]
+※최신 기획서 : Mullen2.0_나만의메모_v1.0_221103.pdf
+구분. 설명.
+입력 권한. 수정권한자만 입력 가능..
+조회 권한. 1. 나만의메모를 입력한 본인만 조회할 수 있음.
+    * 마스터 권한도 조회 불가 (마스터 = 공유캘린더 소유자, 관리자, 일정 등록자)
+2. 나만의메모를 작성한 사람의 권한이 조회권한으로 변경된 경우, 나만의메모 내용은 조회는 가능하지만, 더 이상 수정 불가.
+3. 타인이 일정을 삭제하거나 나만의메모를 작성한 사람이 더 이상 일정에 참여하지 않는 경우, 나만의메모 조회 불가..
+필드 노출 조건. 1. 일정 등록/수정: 나만의메모 필드 노출 (펼침이 디폴트.)
+2. 일정 조회(상세):
+    * 나만의메모가 등록되어 있을 경우, 나만의메모 아이콘 노출. 터치 시 내용 조회할 수 있음. (접힘이 디폴트.)
+    * 나만의메모가 등록되어 있지 않을 경우, 아이콘 미노출..
+일정 삭제. 1. 나만의메모가 입력된 일정을 본인이 삭제할 경우, 휴지통에서 조회+복구할 수 있음.
+2. 본인이 삭제하지 않은 일정인 경우, 삭제한 사람이 복구하기 전까지 나만의메모는 조회 불가. 삭제한 사람이 일정 복구 시, 나만의메모도 복구..
+일정 복사. 일정 복사 시, 나만의메모 복사 가능..
+반복 일정. 1. 반복일정 초기 등록 시에 나만의메모를 입력할 경우, 모든 반복일정에 나만의메모 노출.
+2. 반복일정 수정 시, 선택한 반복일정 수정 방법 (해당 일정만 수정 혹은 향후 반복일정 수정)에 따라서 나만의메모도 반영..
+[참고 문서]
+문서 제목. 링크.
+기획서. Mullen2.0_나만의메모_v1.0_221103.pdf.
+제안서. Mullen 2.0_히든메모 UI 제안_v1.0_221007.pdf.
+제안서 기준 정책. [Mullen-보안일정 히든정보] 정책_220928
+
+한줄요약 :
+										</textarea></br>
+										<script>
+										//로컬 스토리지
+										var output0 = document.getElementById("prompt");
+
+										form0.addEventListener("submit", function() {
+										  localStorage.setItem("output0", output0.value); // output의 값을 localStorage에 저장합니다.
+										  });
+
+										window.addEventListener("load", function() {
+										  const savedOutput0 = localStorage.getItem("output0"); // localStorage에서 output 값을 가져옵니다.
+										  if (savedOutput0) {
+											output0.value = savedOutput0;} // output 값을 저장된 값으로 복원합니다.
+											});
+										</script>
+										<button type="submit" class="btn btn-success"><i class="fa fa-check-circle"></i> Submit</button></br>
+									</div>
+									<!--프롬프트 박스 끝-->
+
+									<!-- 파라미터 조정 -->
+									<div class="col-md-3">
+										<div class="slide-container">
+											<!--Model-->
+											<p class="dropdown-title">Model</p>
+											<select name="model" class="dropdown-model" onchange="location = this.value;">
+												<option disabled>Select Model...</option>
+												<option selected value="text-davinci-003">text-davinci-003</option>
+											</select>
+											<!--Temperature-->
+											<p class="slide-title">Temperature</p>
+											<input id="temperature" name="temperature" class="slide-value" type="text">
+											<input id="temperature_slider"  name="temperature_Slider" class="slider" type="range" required="required"
+												   min="0" max="1" step="0.01" value="0.7" >
+											<script>
+												var temperature = document.getElementById("temperature");
+												var temperature_slider = document.getElementById("temperature_slider");
+												temperature.value = temperature_slider.value;
+
+												temperature_Slider.oninput = function() {
+												temperature.value = this.value;}
+
+												temperature.oninput = function() {
+												temperature_slider.value = this.value;}
+
+												//로컬 스토리지
+												form0.addEventListener("submit", function() {
+												  localStorage.setItem("temperature", temperature.value); // output의 값을 localStorage에 저장합니다.
+												  });
+
+												window.addEventListener("load", function() {
+												  const savedtemperature = localStorage.getItem("temperature"); // localStorage에서 output 값을 가져옵니다.
+												  if (savedtemperature) {
+													temperature.value = savedtemperature;
+													temperature_Slider.value = savedtemperature;} // output 값을 저장된 값으로 복원합니다.
+													});
+											</script>
+
+											<!--top_p-->
+											<p class="slide-title">Top_p</p>
+											<input id="top_p" name="top_p" class="slide-value" type="text">
+											<input id="top_p_slider" name="top_p_slider" class="slider" type="range"
+												   min="0" max="1" step="0.01" value="1.0">
+											<script>
+												var top_p = document.getElementById("top_p");
+												var top_p_slider = document.getElementById("top_p_slider");
+												top_p.value = top_p_slider.value;
+
+												top_p_slider.oninput = function() {
+												top_p.value = this.value;}
+
+												top_p.oninput = function() {
+												top_p_slider.value = this.value;}
+
+												//로컬 스토리지
+												form0.addEventListener("submit", function() {
+												  localStorage.setItem("top_p", top_p.value); // output의 값을 localStorage에 저장합니다.
+												  });
+
+												window.addEventListener("load", function() {
+												  const savedtop_p = localStorage.getItem("top_p"); // localStorage에서 output 값을 가져옵니다.
+												  if (savedtop_p) {
+													top_p.value = savedtop_p;
+													top_p_slider.value = savedtop_p;} // output 값을 저장된 값으로 복원합니다.
+													});
+											</script>
+
+											<!--max_tokens-->
+											<p class="slide-title">Max Tokens</p>
+											<input id="max_tokens" name="max_tokens" class="slide-value" type="text">
+											<input id="max_tokens_slider" name="max_tokens_slider" class="slider" type="range"
+												   min="1" max="4000" step="1" value="512">
+											<script>
+												var max_tokens = document.getElementById("max_tokens");
+												var max_tokens_slider = document.getElementById("max_tokens_slider");
+												max_tokens.value = max_tokens_slider.value;
+
+												max_tokens_slider.oninput = function() {
+												max_tokens.value = this.value;}
+
+												max_tokens.oninput = function() {
+												max_tokens_slider.value = this.value;}
+
+												//로컬 스토리지
+												form0.addEventListener("submit", function() {
+												  localStorage.setItem("max_tokens", max_tokens.value); // output의 값을 localStorage에 저장합니다.
+												  });
+
+												window.addEventListener("load", function() {
+												  const savedmax_tokens = localStorage.getItem("max_tokens"); // localStorage에서 output 값을 가져옵니다.
+												  if (savedmax_tokens) {
+													max_tokens.value = savedmax_tokens;
+													max_tokens_slider.value = savedmax_tokens;} // output 값을 저장된 값으로 복원합니다.
+													});
+											</script>
+										</div>
+									</div>
+								</form>
+								</div>
+								<!--파라미터 조정 끝-->
+							</div>
+						</div>
+					</div>
+					<!-- 오버뷰 끝 -->
+
+				<!-- 출력 시작 -->
+				<div class="container-fluid">
+					<div class="panel panel-headline">
+						<div class="panel-heading">
+							<h3 class="panel-title">결과</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-9">
+									<form class="" action="" method="POST">
+										<textarea class="form-control" required="required" rows="5" style="padding:10px;" placeholder="요약문 결과...">{{result_openai}}</textarea></br>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 출력 끝-->
+				</div>
+			</div>
+		</div>
+		<!-- 메인 끝 -->
+	</div>
+
+	<!-- Javascript -->
+	<script src="static/vendor/jquery/jquery.min.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="static/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="static/scripts/klorofil-common.js"></script>
+</body>
+</html>
